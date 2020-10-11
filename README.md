@@ -1,8 +1,6 @@
 # cumulative-heatmap-calculation
 fast calculation of heatmap from given points.
 
-${col = (x _{i}-min(x))//side}$
-
 ## introduction
 This code is a follow-up project for calculating a heat map using a recursive algorithm: [**recursive-HeatMap-calculation**](https://github.com/EtzionData/recursive-HeatMap-calculation). Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heatmap. 
 
@@ -10,8 +8,8 @@ The recursive method has managed to result a significant improvement in the runt
 
 -	**Step One:** Define the **division** parameter for the points 2D space, so that we know the length of a **side** of each square we want to calculate.
 -	**Step Two:** We will use a loop through all the points, and calculate for each point its the row and column, using **flooring division**:
-   
-   <a href="https://www.codecogs.com/eqnedit.php?latex=col&space;=&space;(x&space;_{i}-min(x))//side" target="_blank"><img src="https://latex.codecogs.com/gif.latex?                col&space;=&space;(x&space;_{i}-min(x))//side" title="col = (x _{i}-min(x))//side" /></a>
+   col = (x-min(x))//side
+   row = (y-min(y))//side
    
 -	**Step Three:** Now, split each square into four small squares in equal size. We will perform **Step Two** for each of these new squares, but now it will only be performed on the coordinates that matched the boundaries of the original square.
 -	**Step Four:** Repeat the process recursively until we reach squares size of the desired resolution.
