@@ -11,20 +11,20 @@ The recursive method has managed to result a significant improvement in the runt
 
     <img src="https://render.githubusercontent.com/render/math?math=col ={(x_{i}-min(x))//side}">
     
-     
+    and: 
     
     <img src="https://render.githubusercontent.com/render/math?math=row ={(y_{i}-min(y))//side}">
     
--	**Step Three:** Now, split each square into four small squares in equal size. We will perform **Step Two** for each of these new squares, but now it will only be performed on the coordinates that matched the boundaries of the original square.
--	**Step Four:** Repeat the process recursively until we reach squares size of the desired resolution.
+-	**Step Three:** We will use the **row** and **column** we have calculated as KEY in the dictionary, so that we can accumulate for each KEY the amount of points associated with it.
+-	**Step Four:** now we get heatmap dictionary, that maintain for each row and column the number of intersected point to its area.
 
-If we encounter during the process a square that does not intersect at all with the coordinates, we will stop its division. Now, we will save all the squares we calculated with intersection count bigger than zero. Now we got a heat map with the required resolution! As can be seen, the runtime of the calculation using the recursive algorithm is significantly lower than the naive algorithm:
+This method allows a runtime of **O(n)** and produces only squares that overlap to the given points. This implementation allows extremely fast runtime, even for a large amount of given points. As can be seen, the runtime of the calculation using the cumulative algorithm is significantly faster, relative even to the recursive algorithm:
 
-![runtime](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)
+![runtime](https://github.com/EtzionData/cumulative-HeatMap-calculation/blob/master/Pictures/compare.png)
 
-The resolution of the heat map can be adjusted using the **"depth"** variable. This variable determines how many splits to make in each of the first squares. The larger the "depth" variable, the higher the resolution we get. You can see a diagram describing the split into squares, by each depth:
+The resolution of the heatmap can be adjusted using the **"division"** variable. This variable determines to how many parts should the points 2D space should divide. The larger the "division" variable, the higher the resolution we get. You can see a diagram describing the split into squares, by each division:
 
-![square size](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/squares.png)
+![square size](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/divisions.png)
 
 As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "depth" variable will lead to different results. A simple example based on the file [**circle.csv**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/examples/circle.csv) illustrates how different values resulted different outputs:
 
