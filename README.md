@@ -20,11 +20,11 @@ The recursive method has managed to result a significant improvement in the runt
 
 This method allows a runtime of **O(n)** and produces only squares that overlap to the given points. This implementation allows extremely fast runtime, even for a large amount of given points. As can be seen, the runtime of the calculation using the cumulative algorithm is significantly faster, relative even to the recursive algorithm:
 
-![runtime](https://github.com/EtzionData/cumulative-HeatMap-calculation/blob/master/Pictures/compare.png)
+![runtime](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/compare.png)
 
 The resolution of the heatmap can be adjusted using the **"division"** variable. This variable determines to how many parts should the points 2D space should divide. The larger the "division" variable, the higher the resolution we get. You can see a diagram describing the split into squares, by each division:
 
-![square size](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/divisions.png)
+![square size](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/divisions.gif)
 
 As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "depth" variable will lead to different results. A simple example based on the file [**circle.csv**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/examples/circle.csv) illustrates how different values resulted different outputs:
 
