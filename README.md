@@ -11,7 +11,7 @@ The recursive method has managed to result a significant improvement in the runt
 
     <img src="https://render.githubusercontent.com/render/math?math=col ={(x_{i}-min(x))//side}">
     
-    and
+     
     
     <img src="https://render.githubusercontent.com/render/math?math=row ={(y_{i}-min(y))//side}">
     
