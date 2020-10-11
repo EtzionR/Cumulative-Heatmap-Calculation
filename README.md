@@ -11,6 +11,7 @@ The recursive method has managed to result a significant improvement in the runt
 
     <img src="https://render.githubusercontent.com/render/math?math=col ={(x_{i}-min(x))//side}">
     
+    
     <img src="https://render.githubusercontent.com/render/math?math=row ={(y_{i}-min(y))//side}">
     
 -	**Step Three:** Now, split each square into four small squares in equal size. We will perform **Step Two** for each of these new squares, but now it will only be performed on the coordinates that matched the boundaries of the original square.
