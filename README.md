@@ -7,9 +7,12 @@ This code is a follow-up project for calculating a heat map using a recursive al
 The recursive method has managed to result a significant improvement in the runtime of the code ([**see here**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)). But, there are still modifications that can be made even better results. To calculate the heatmap, the code [**cumulative_heatmap.py**]( https://github.com/EtzionData/cumulative-HeatMap-calculation/blob/master/cumulative_heatmap.py) applied different approach from the previous project, and use **Flooring Division** to improve the runtime of the code:
 
 -	**Step One:** Define the **division** parameter for the points 2D space, so that we know the length of a **side** of each square we want to calculate.
--	**Step Two:** We will use a loop through all the points, and calculate for each point its the row and column, using **flooring division**, when **side** is used as a denominator
+-	**Step Two:** We will use a loop through all the points, and calculate for each point its the row and column, using **flooring division**, when **side** is used as a denominator:
+
     <img src="https://render.githubusercontent.com/render/math?math=col ={(x_{i}-min(x))//side}">
+    
     <img src="https://render.githubusercontent.com/render/math?math=row ={(y_{i}-min(y))//side}">
+    
 -	**Step Three:** Now, split each square into four small squares in equal size. We will perform **Step Two** for each of these new squares, but now it will only be performed on the coordinates that matched the boundaries of the original square.
 -	**Step Four:** Repeat the process recursively until we reach squares size of the desired resolution.
 
