@@ -24,11 +24,11 @@ This method allows a runtime of **O(n)** and produces only squares that overlap 
 
 The resolution of the heatmap can be adjusted using the **"division"** variable. This variable determines to how many parts should the points 2D space should divide. The larger the "division" variable, the higher the resolution we get. You can see a diagram describing the split into squares, by each division:
 
-![square size](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/divisions.gif)
+![square size](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/square_divisions.gif)
 
 As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "division" variable will lead to different results. A simple example based on the file [**Athens.kml**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/examples/Athens.kml) illustrates how different values resulted different outputs:
 
-![resolution](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/resolution.gif)
+![resolution](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/athena_resolution.gif)
 
 The heat map calculation performed using the **HeatMap** object. This object receives a Python list consisting of tuples of X and Y coordinates. Also, the desired division also must be set for the object. Using the data about the coordinates, the HeatMap calculates the intersections. The object procces the coordinates to heatmap result, such as this example, based on the file [**data.npy**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/examples/data.npy) (that contain **1,000,000** points coordinates!):
 
