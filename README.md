@@ -26,11 +26,11 @@ The resolution of the heatmap can be adjusted using the **"division"** variable.
 
 ![square size](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/divisions.gif)
 
-As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "depth" variable will lead to different results. A simple example based on the file [**circle.csv**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/examples/circle.csv) illustrates how different values resulted different outputs:
+As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "division" variable will lead to different results. A simple example based on the file [**Athens.kml**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/examples/Athens.kml) illustrates how different values resulted different outputs:
 
-![six_plots](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/diff_depth.png)
+![resolution](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/resolution.gif)
 
-The heat map is calculation performed using the **HeatMap** object. This object receives a Python list consisting of tuples of X and Y coordinates. Also, the desired depth also must be set for the object. Using the data about the coordinates, the HeatMap calculates the initial squares and performs the recursive calculation on them. At the end of the process, the squares that compose the heat map are calculated, as can be seen in the example process figure (based on the file [**rome_100000.shp**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/examples/rome_100000.shp) that contain **100,000** points coordinates!):
+The heat map calculation performed using the **HeatMap** object. This object receives a Python list consisting of tuples of X and Y coordinates. Also, the desired division also must be set for the object. Using the data about the coordinates, the HeatMap calculates the intersections. The object procces the coordinates to heatmap result, such as this example, based on the file [**data.npy**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/examples/data.npy) (that contain **1,000,000** points coordinates!):
 
 ![input output](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/process.png)
 
