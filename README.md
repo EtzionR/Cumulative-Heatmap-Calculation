@@ -26,7 +26,7 @@ The resolution of the heatmap can be adjusted using the **"division"** variable.
 
 ![square size](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/square_divisions.gif)
 
-As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "division" variable will lead to different results. A simple example based on the file [**Athens.kml**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/examples/Athens.kml) illustrates how different values resulted different outputs:
+As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "division" variable will lead to different results. A simple example based on the file [**Athens.kml**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/examples/Athens.kml), illustrates how different values resulted different outputs:
 
 ![resolution](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/athena_resolution.gif)
 
