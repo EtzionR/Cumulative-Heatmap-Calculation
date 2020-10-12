@@ -13,7 +13,7 @@ The recursive method has managed to result a significant improvement in the runt
     
     and: 
     
-    <img src="https://render.githubusercontent.com/render/math?math=row_{i} ={(y_{i}-min(y))//side}">
+    <img src="https://render.githubusercontent.com/render/math?math=row_{i} = {(y_{i}-min(y))//side}">
     
 -	**Step Three:** We will use the **row** and **column** we have calculated as KEY in the dictionary, so that we can accumulate for each KEY the amount of points associated with it.
 -	**Step Four:** now we get heatmap dictionary, that maintain for each row and column the number of intersected point to its area.
