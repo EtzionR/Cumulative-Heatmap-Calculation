@@ -41,7 +41,7 @@ The final squares can be accessed as one of the data of the object: **HeatMap(xy
 It is also possible to **create a plot** based on the results of the heat map using the function built into the object, as in the following example:
 ``` sh
 from cumulative_heatmap import HeatMap, loadkml
-xy = loadkml(rexamples\Athens.kml)
+xy = loadkml(r'examples\Athens.kml')
 hm = HeatMap(xy, division=80)
 hm.plot()
 ```
@@ -49,7 +49,7 @@ hm.plot()
 
 In addition, the calculation results can be exported and saved as files in various formats using the **save_map** function of the object, as can be seen in the [**implementation.py**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/master/implementation.py) file. The function allows to save the results in **SHP**, **KML** and **CSV** format. It should be noted that saving the results as layers is automatically set to  geographic coordinate system of **WGS_1984_DD**. 
 
-Also, the data that saved to a KML file gets a color corresponding to the count of its intersection. Example for such output you can see [**here**](https://www.google.com/maps/d/edit?mid=1VJ0SwJSOOVDwZDDhKAilDdkR0XbxY3rM&usp=sharing) as interactive **MYMAPS** page. This output based on the [**Gibraltar.kml**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/examples/Gibraltar.kml) example file and the output also available here: [**Gibraltar_Output.kml**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/output/Gibraltar_Output.kml). Also, for convenience, the code contains three XY-tuple-list load functions from **SHP**, **KML** and **CSV** files:
+Also, the data that saved to a KML file gets a color corresponding to the count of its intersection. Example for such output you can see [**here**](https://www.google.com/maps/d/viewer?mid=1zAMW79kdV6ZvRfsQWNh6QpkEIt3bBYu0&usp=sharing) as interactive **MYMAPS** page. This output based on the [**Athens.kml**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/examples/Athens.kml) example file and the output also available here: [**Athens_output.kml**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/output/Athens_output.kml). Also, for convenience, the code contains three XY-tuple-list load functions from **SHP**, **KML** and **CSV** files:
 - **loadshp**
 - **loadkml**
 - **loadcsv**    (this function required also the X & Y fields names)
@@ -71,7 +71,7 @@ The code uses the following libraries in Python:
 ## application
 An application of the code is attached to this page under the name: 
 
-[**implementation.py**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/implementation.py)
+[**implementation.py**](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/master/implementation.py)
 
 the examples outputs are also attached here.
 
@@ -79,16 +79,16 @@ the examples outputs are also attached here.
 To use this code, you just need to import it as follows:
 ``` sh
 # import
-from smart_heatmap import HeatMap, loadshp
+from cumulative_heatmap import HeatMap, loadshp
 
 # load data
 xy = loadshp(r'examples\feature_class.shp')
 
 # define depth variable
-depth = 5
+divison = 5
 
 # application
-hm = HeatMap(xy, depth)
+hm = HeatMap(xy, divison)
 
 # plot
 hm.plot()
@@ -101,7 +101,7 @@ When the variables displayed are:
 
 **xy:** the given xy coordiantes list.
 
-**depth** the required depth for the recursion, define the output resolution.
+**division** the required divisions for the 2D space, define the output resolution.
 
 
 ## License
