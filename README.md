@@ -34,7 +34,7 @@ The heat map calculation performed using the **HeatMap** object. This object rec
 
 ![input output](https://github.com/EtzionData/cumulative-heatmap-calculation/blob/main/Pictures/process.png)
 
-The final squares can be accessed as one of the data of the object: **HeatMap(xy_tpl_lst, depth = 5).get_map()**. The function return list of dictionaries(one for each square), each one contain two value:
+The final squares can be accessed as one of the data of the object: **HeatMap(xy_tpl_lst, division = 100).get_map()**. The function return list of dictionaries(one for each square), each one contain two value:
 -	**"xy":** conatian the X and Y coordinate values of the square
 -	**"count":** conatian the number of the points intersect with the square
 
