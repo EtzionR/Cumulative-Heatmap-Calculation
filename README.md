@@ -9,11 +9,11 @@ The recursive method has managed to result a significant improvement in the runt
 -	**Step One:** Define the **division** parameter for the points 2D space, so that we know the length of a **side** of each square we want to calculate.
 -	**Step Two:** We will use a loop through all the points, and calculate for each point its the row and column, using **flooring division**, when **side** is used as a denominator:
 
-    <img src="https://render.githubusercontent.com/render/math?math=col_{i} ={(x_{i}-min(x))//side}">
+    <img src="https://render.githubusercontent.com/render/math?math=col_{i} = {(x_{i}-min(x))//side}">
     
     and: 
     
-    <img src="https://render.githubusercontent.com/render/math?math=row ={(y_{i}-min(y))//side}">
+    <img src="https://render.githubusercontent.com/render/math?math=row_{i} ={(y_{i}-min(y))//side}">
     
 -	**Step Three:** We will use the **row** and **column** we have calculated as KEY in the dictionary, so that we can accumulate for each KEY the amount of points associated with it.
 -	**Step Four:** now we get heatmap dictionary, that maintain for each row and column the number of intersected point to its area.
