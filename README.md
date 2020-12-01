@@ -1,7 +1,7 @@
-# cumulative-heatmap-calculation
+# Cumulative-Heatmap-Calculation
 fast calculation of heatmap from given points.
 
-## introduction
+## Introduction
 This code is a follow-up project for calculating a heat map using a recursive algorithm: [**recursive-HeatMap-calculation**](https://github.com/EtzionR/recursive-HeatMap-calculation). Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heatmap. 
 
 The recursive method has managed to result a significant improvement in the runtime of the code ([**see here**](https://github.com/EtzionR/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)). But, there are still modifications that can be made even better results. To calculate the heatmap, the code [**cumulative_heatmap.py**]( https://github.com/EtzionR/cumulative-HeatMap-calculation/blob/master/cumulative_heatmap.py) applied different approach from the previous project, and use **Flooring Division** to improve the runtime of the code:
@@ -56,7 +56,7 @@ Also, the data that saved to a KML file gets a color corresponding to the count 
 - **loadcsv**    (this function required also the X & Y fields names)
 
 
-## libraries
+## Libraries
 The code uses the following libraries in Python:
 
 **matplotlib**
@@ -69,14 +69,14 @@ The code uses the following libraries in Python:
 
 **numpy**
 
-## application
+## Application
 An application of the code is attached to this page under the name: 
 
 [**implementation.py**](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/master/implementation.py)
 
 the examples outputs are also attached here.
 
-## example for using the code
+## Example for using the code
 To use this code, you just need to import it as follows:
 ``` sh
 # import
