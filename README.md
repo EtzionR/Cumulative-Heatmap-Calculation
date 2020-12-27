@@ -1,7 +1,7 @@
 # Cumulative-Heatmap-Calculation
 fast calculation of heatmap from given points.
 
-## Introduction
+## Overview
 This code is a follow-up project for calculating a heat map using a recursive algorithm: [**recursive-HeatMap-calculation**](https://github.com/EtzionR/recursive-HeatMap-calculation). Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heatmap. 
 
 The recursive method has managed to result a significant improvement in the runtime of the code ([**see here**](https://github.com/EtzionR/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)). But, there are still modifications that can be made even better results. To calculate the heatmap, the code [**cumulative_heatmap.py**]( https://github.com/EtzionR/cumulative-HeatMap-calculation/blob/master/cumulative_heatmap.py) applied different approach from the previous project, and use **Flooring Division** to improve the runtime of the code:
