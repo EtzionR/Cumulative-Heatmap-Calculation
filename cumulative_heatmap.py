@@ -48,9 +48,9 @@ class HeatMap:
         """
         dct ={}
         for x,y in self.xy:
-            col = str(int((x-self.x_min) // self.side))
-            row = str(int((y-self.y_min) // self.side))
-            key = col+','+row
+            key_x = (x-self.x_min) // self.side
+            key_y = (y-self.y_min) // self.side
+            key = (key_x,key_y)
             if key in dct:
                 dct[key]+= 1
             else:
@@ -64,8 +64,7 @@ class HeatMap:
         :param y: number of y rows
         :return: coordinates for the square polygon
         """
-        x, y = key.split(',')
-        x, y = float(x), float(y)
+        x, y = key
         x_min = (x * self.side) + self.x_min
         y_min = (y * self.side) + self.y_min
         x_max = min(((x + 1) * self.side) + self.x_min, self.x_max)
@@ -103,7 +102,7 @@ class HeatMap:
 
         ax.set_title(f'HeatMap Output\n(division={self.division}, number of points={len(self.xy)})')
         poly = [Polygon(self.calculate_coordinates(key), True) for key in self.heatmap]
-        p = PatchCollection(poly, cmap='autumn')
+        p = PatchCollection(poly, cmap = 'autumn')
         p.set_array(np.array([self.heatmap[key] for key in self.heatmap]))
         ax.add_collection(p)
 
@@ -150,8 +149,7 @@ class HeatMap:
         """
         lst=[]
         for key in self.heatmap:
-            x = key.split(',')[0]
-            y = key.split(',')[1]
+            x,y = key
             coord = self.calculate_coordinates(key)
             lst.append((self.heatmap[key], x, y, coord[0][0],coord[0][1],coord[2][0],coord[2][1]))
         fields = ['count','x_col','y_row','x_min','y_min','x_max','y_max']
@@ -167,8 +165,7 @@ class HeatMap:
         layer.field('x_col', 'N')
         layer.field('y_row', 'N')
         for key in self.heatmap:
-            x = key.split(',')[0]
-            y = key.split(',')[1]
+            x, y = key
             layer.poly([self.calculate_coordinates(key)])
             layer.record(self.heatmap[key], x, y)
         layer.close()
