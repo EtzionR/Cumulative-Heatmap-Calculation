@@ -40,7 +40,7 @@ The final squares can be accessed as one of the data of the object: **HeatMap(xy
 
 It is also possible to **create a plot** based on the results of the heat map using the function built into the object, as in the following example:
 ``` sh
-from cumulative_heatmap import HeatMap, loadkml
+from chm import HeatMap, loadkml
 
 xy = loadkml(r'examples\Athens.kml')
 hm = HeatMap(xy, division=80)
