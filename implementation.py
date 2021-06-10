@@ -1,4 +1,4 @@
-from cumulative_heatmap import HeatMap, loadshp, loadcsv, loadkml
+from chm import HeatMap, loadshp, loadcsv, loadkml
 import pandas as pd
 import numpy as np
 
