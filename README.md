@@ -4,7 +4,7 @@ fast calculation of heatmap from given points.
 ## Overview
 This code is a follow-up project for calculating a heat map using a recursive algorithm: [**recursive-HeatMap-calculation**](https://github.com/EtzionR/recursive-HeatMap-calculation). Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heatmap. 
 
-The recursive method has managed to result a significant improvement in the runtime of the code ([**see here**](https://github.com/EtzionR/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)). But, there are still modifications that can be made even better results. To calculate the heatmap, the code [**cumulative_heatmap.py**]( https://github.com/EtzionR/cumulative-HeatMap-calculation/blob/master/cumulative_heatmap.py) applied different approach from the previous project, and use **Flooring Division** to improve the runtime of the code:
+The recursive method has managed to result a significant improvement in the runtime of the code ([**see here**](https://github.com/EtzionR/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)). But, there are still modifications that can be made even better results. To calculate the heatmap, the code [**chm.py**]( https://github.com/EtzionR/cumulative-HeatMap-calculation/blob/master/chm.py) applied different approach from the previous project, and use **Flooring Division** to improve the runtime of the code:
 
 -	**Step One:** Define the **division** parameter for the points 2D space, so that we know the length of a **side** of each square we want to calculate.
 -	**Step Two:** We will use a loop through all the points, and calculate for each point its the row and column, using **flooring division**, when **side** is used as a denominator:
@@ -18,9 +18,9 @@ The recursive method has managed to result a significant improvement in the runt
 -	**Step Three:** We will use the **row** and **column** we have calculated as KEY in the dictionary, so that we can accumulate for each KEY the amount of points associated with it.
 -	**Step Four:** now we get heatmap dictionary, that maintain for each row and column the number of intersected point to its area.
 
-This method allows a runtime of **O(n)** and produces only squares that overlap to the given points. This implementation allows extremely fast runtime, even for a large amount of given points. As can be seen, the runtime of the calculation using the cumulative algorithm is significantly faster, relative even to the recursive algorithm:
+This method allows a runtime of **O(n)** and produces only squares that overlap to the given points. This implementation allows extremely fast runtime, even for a large amount of given points. As can be seen, the runtime of the calculation using the cumulative algorithm is **significantly faster**, relative even to the [recursive algorithm]((https://github.com/EtzionR/recursive-HeatMap-calculation)):
 
-![runtime](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/Pictures/compare.png)
+![runtime](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/Pictures/compare_.png)
 
 The resolution of the heatmap can be adjusted using the **"division"** variable. This variable determines to how many parts should the points 2D space should divide. The larger the "division" variable, the higher the resolution we get. You can see a diagram describing the split into squares, by each division:
 
@@ -55,6 +55,7 @@ Also, the data that saved to a KML file gets a color corresponding to the count 
 - **loadkml**
 - **loadcsv**    (this function required also the X & Y fields names)
 
+The **Cumulative-Heatmap-Calculation** code was originally written as a standard Python script, but now its based on a **Numpy** implementation, which **increase its speed** over the previous version significantly (see [**here**](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/Pictures/compare_.png) for runtime comparsion). The old version of the code is also available, in the following path: [**old version**](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/old_version/cumulative_heatmap.py)
 
 ## Libraries
 The code uses the following libraries in Python:
@@ -80,7 +81,7 @@ the examples outputs are also attached here.
 To use this code, you just need to import it as follows:
 ``` sh
 # import
-from cumulative_heatmap import HeatMap, loadshp
+from chm import HeatMap, loadshp
 
 # load data
 xy = loadshp(r'examples\feature_class.shp')
