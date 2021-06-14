@@ -55,7 +55,7 @@ Also, the data that saved to a KML file gets a color corresponding to the count 
 - **loadkml**
 - **loadcsv**    (this function required also the X & Y fields names)
 
-The **Cumulative-Heatmap-Calculation** code was originally written as a standard Python script, but now its based on a **Numpy** implementation, which **increase its speed** over the previous version significantly (see [**here**](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/Pictures/compare_.png) for runtime comparsion). The old version of the code is also available, in the following path: [**old version**](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/old_version/cumulative_heatmap.py)
+The **Cumulative-Heatmap-Calculation** code was originally written as a standard Python script, but now it rebuild by using **Numpy** implementation. This new vrsion **increase the speed**, over the previous version significantly (see [**here**](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/Pictures/compare_.png) for runtime comparsion). The old version of the code is also available, in the following path: [**old version**](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/old_version/cumulative_heatmap.py)
 
 ## Libraries
 The code uses the following libraries in Python:
