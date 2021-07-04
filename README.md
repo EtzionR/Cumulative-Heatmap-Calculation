@@ -18,6 +18,10 @@ The recursive method has managed to result a significant improvement in the runt
 -	**Step Three:** We will use the **row** and **column** we have calculated as KEY in the dictionary, so that we can accumulate for each KEY the amount of points associated with it.
 -	**Step Four:** now we get heatmap dictionary, that maintain for each row and column the number of intersected point to its area.
 
+An illustration of the HeatMap calculation process can be seen in the following plot. As you can see, each dot is added to a specific square on the map, so in the end of the process we get the cumulative result:
+
+![cumulative_gif](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/Pictures/cum_.gif)
+
 This method allows a runtime of **O(n)** and produces only squares that overlap to the given points. This implementation allows extremely fast runtime, even for a large amount of given points. As can be seen, the runtime of the calculation using the cumulative algorithm is **significantly faster**, relative even to the [recursive algorithm]((https://github.com/EtzionR/recursive-HeatMap-calculation)):
 
 ![runtime](https://github.com/EtzionR/cumulative-heatmap-calculation/blob/main/Pictures/compare_.png)
