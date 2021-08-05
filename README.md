@@ -1,5 +1,5 @@
 # Cumulative-Heatmap-Calculation
-fast calculation of heatmap from given points.
+Fast calculation of heatmap from given 2D points.
 
 ## Overview
 This code is a follow-up project for calculating a heat map using a recursive algorithm: [**recursive-HeatMap-calculation**](https://github.com/EtzionR/recursive-HeatMap-calculation). Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heatmap. 
