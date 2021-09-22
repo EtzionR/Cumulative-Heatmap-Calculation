@@ -90,7 +90,7 @@ from chm import HeatMap, loadshp
 # load data
 xy = loadshp(r'examples\feature_class.shp')
 
-# define depth variable
+# define division-resolution variable
 divison = 5
 
 # application
